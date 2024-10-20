@@ -1,0 +1,42 @@
+﻿<Window x:Class="AccessToCsvConverter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Access/Excel/XML to CSV Converter" Height="500" Width="500"
+        FontFamily="Segoe UI" FontSize="14">
+    <Grid>
+        <!-- Auswahl, ob Access, Excel oder XML -->
+        <Label Content="Dateityp auswählen:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,0,0,0"/>
+        <RadioButton Name="AccessRadioButton" Content="Access (.mdb/.accdb)" IsChecked="True" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,30,0,0"/>
+        <RadioButton Name="ExcelRadioButton" Content="Excel (.xls/.xlsx)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,60,0,0"/>
+        <RadioButton Name="XmlRadioButton" Content="XML (.xml)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,90,0,0"/>
+
+        <!-- Dateiauswahl -->
+        <Label Content="Datei auswählen:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,130,0,0"/>
+        <TextBox Name="FilePath" HorizontalAlignment="Left" Height="23" Margin="10,160,0,0" VerticalAlignment="Top" Width="350"/>
+        <Button Content="Durchsuchen..." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="370,160,0,0" Width="100" Click="BrowseFile"/>
+
+        <!-- Ausgabeordnerauswahl -->
+        <Label Content="CSV-Ausgabeordner:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,200,0,0"/>
+        <TextBox Name="CsvOutputPath" HorizontalAlignment="Left" Height="23" Margin="10,230,0,0" VerticalAlignment="Top" Width="350"/>
+        <Button Content="Durchsuchen..." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="370,230,0,0" Width="100" Click="BrowseOutputFolder"/>
+
+        <!-- Option zum Hinzufügen der Kopfzeile -->
+        <CheckBox Name="IncludeHeaderCheckBox" Content="Kopfzeile einfügen" IsChecked="True" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,270,0,0"/>
+
+        <!-- Trennzeichenoption -->
+        <Label Content="Trennzeichen:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,290,0,0"/>
+        <RadioButton Name="CommaRadioButton" Content="Semikolon (;)" IsChecked="True" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,320,0,0"/>
+        <RadioButton Name="DotRadioButton" Content="Punkt (.)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,340,0,0"/>
+
+        <!-- Zahlenformatoption -->
+        <Label Content="Zahlenformat:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="200,290,0,0"/>
+        <RadioButton Name="NumberCommaRadioButton" Content="Dezimal Komma (1.000,00)" IsChecked="True" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="200,320,0,0"/>
+        <RadioButton Name="NumberDotRadioButton" Content="Dezimal Punkt (1,000.00)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="200,340,0,0"/>
+
+        <!-- Konvertieren Button -->
+        <Button Content="Konvertieren" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,380,0,0" Width="150" Height="40" Click="ConvertToCsv"/>
+
+        <!-- Statusanzeige -->
+        <TextBlock Name="StatusText" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,430,0,0" Width="460" TextWrapping="Wrap"/>
+    </Grid>
+</Window>
