@@ -72,10 +72,10 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>9A41962B4397DD04510F2F0F669255E155BB63BD</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>1D530EB89E694390D9BF471AE7E119CD660A935C</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>Access-to-CSV_Converter_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>Access-to-CSV_Converter_1_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -140,6 +140,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="Access-to-CSV_Converter_1_TemporaryKey.pfx" />
     <None Include="Access-to-CSV_Converter_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
