@@ -6,9 +6,9 @@
     <Grid>
         <!-- Auswahl, ob Access, Excel oder XML -->
         <Label Content="Dateityp auswählen:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,0,0,0"/>
-        <RadioButton Name="AccessRadioButton" Content="Access (.mdb/.accdb)" IsChecked="True" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,30,0,0"/>
-        <RadioButton Name="ExcelRadioButton" Content="Excel (.xls/.xlsx)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,60,0,0"/>
-        <RadioButton Name="XmlRadioButton" Content="XML (.xml)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,90,0,0"/>
+        <RadioButton Name="AccessRadioButton" Content="Access (.mdb/.accdb)" IsChecked="True" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,30,0,0" GroupName="Dateityp"/>
+        <RadioButton Name="ExcelRadioButton" Content="Excel (.xls/.xlsx)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,60,0,0" GroupName="Dateityp"/>
+        <RadioButton Name="XmlRadioButton" Content="XML (.xml)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,90,0,0" GroupName="Dateityp"/>
 
         <!-- Dateiauswahl -->
         <Label Content="Datei auswählen:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,130,0,0"/>
@@ -25,13 +25,13 @@
 
         <!-- Trennzeichenoption -->
         <Label Content="Trennzeichen:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,290,0,0"/>
-        <RadioButton Name="CommaRadioButton" Content="Semikolon (;)" IsChecked="True" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,320,0,0"/>
-        <RadioButton Name="DotRadioButton" Content="Punkt (.)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,340,0,0"/>
+        <RadioButton Name="CommaRadioButton" Content="Semikolon (;)" IsChecked="True" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,320,0,0" GroupName="Trennzeichen"/>
+        <RadioButton Name="DotRadioButton" Content="Punkt (.)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,340,0,0" GroupName="Trennzeichen"/>
 
         <!-- Zahlenformatoption -->
         <Label Content="Zahlenformat:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="200,290,0,0"/>
-        <RadioButton Name="NumberCommaRadioButton" Content="Dezimal Komma (1.000,00)" IsChecked="True" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="200,320,0,0"/>
-        <RadioButton Name="NumberDotRadioButton" Content="Dezimal Punkt (1,000.00)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="200,340,0,0"/>
+        <RadioButton Name="NumberCommaRadioButton" Content="Dezimal Komma (1.000,00)" IsChecked="True" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="200,320,0,0" GroupName="Zahlenformat"/>
+        <RadioButton Name="NumberDotRadioButton" Content="Dezimal Punkt (1,000.00)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="200,340,0,0" GroupName="Zahlenformat"/>
 
         <!-- Konvertieren Button -->
         <Button Content="Konvertieren" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,380,0,0" Width="150" Height="40" Click="ConvertToCsv"/>
